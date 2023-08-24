@@ -9,7 +9,7 @@
   <body>
     <section class="landing">
       <nav>
-        <div class="container">
+        <div class="container__nav">
           <div class="row">
             <div class="nav__logo--wrapper">
               <img
@@ -47,13 +47,16 @@
                 Our templates are easy to setup, understand and customize. Fully
                 modular components with a variety of pages and components.
               </p>
-            
-              <div class="header__des--input">
-                <form action="">
-                <input type="text" placeholder="Your E-mail Address" class="des__placeholder" />
+
+              <form action="" class="header__des--form">
+                <input
+                  type="text"
+                  placeholder="Your E-mail Address"
+                  class="des__placeholder"
+                />
                 <button class="header__des--button">Get Started</button>
-              </div>
-                </form>
+              </form>
+
               <p class="header__des__sub-title">Our Trusted Customers</p>
               <img
                 src="./assets/customers-logo-strip.680ac7c2e8ae28161d2c.png"
@@ -61,13 +64,11 @@
                 alt=""
               />
             </div>
-            <figure class="header__img--wrapper">
-              <img
-                src="assets/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg"
-                class="header__img"
-                alt=""
-              />
-            </figure>
+            <img
+              src="assets/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg"
+              class="header__img"
+              alt=""
+            />
           </div>
         </div>
       </header>
