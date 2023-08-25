@@ -14,6 +14,7 @@ ul {
 nav {
   padding: 12px;
   height: 80px;
+  margin-bottom: 86px;
 }
 
 h1 {
@@ -36,7 +37,7 @@ h1 {
 }
 
 .container__nav {
-  margin-top: 16px;
+  margin: 16px;
 }
 
 .nav__logo--wrapper {
@@ -232,15 +233,14 @@ h2.section__title {
 }
 
 .features__item--img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 64px;
   height: 64px;
   color: #6415ff;
   border: 1px solid #a0aec0;
   border-radius: 50%;
   margin-right: 16px;
+  display: grid;
+place-items: center;
 }
 
 .features__item--para {
