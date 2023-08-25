@@ -200,6 +200,7 @@ h2.section__title {
   color: #243e63;
   font-size: 48px;
   margin-bottom: 24px;
+  font-weight: 900;
 }
 
 .features__sub-title {
@@ -277,6 +278,7 @@ h2.section__title {
 
 .quality__title {
   margin-top: 24px;
+  font-weight: 900;
 }
 
 /* STEPS */
@@ -306,6 +308,7 @@ h2.section__title {
 
 .steps__title {
   margin-top: 24px;
+  font-weight: 900;
 }
 
 .steps__list {
@@ -337,53 +340,71 @@ h6 {
 
 /* VALUES */
 
-#steps {
-    margin-bottom: 168px;
-  }
-  
-  .values__info {
-    width: 45%;
-  }
-  
-  .values__img--wrapper {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 68px;
-  }
-  
-  .values__para {
-    color: #7c8ba1;
+#values {
+  margin-bottom: 168px;
+}
+
+.values__list {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.value__title {
+    margin-top: 16px;
+    font-weight: 900;
+}
+
+.value__item--title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.values__img--wrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 68px;
+}
+
+.values__para {
+  color: #7c8ba1;
+  font-size: 16px;
+  max-width: 500px;
+  line-height: 2;
+  margin: 16px 0;
+}
+
+.item__icon--aff {
+    width: 36px;
+    height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: #9ae6bf;
+  color: #346b4f;
+  padding: 8px;
+}
+
+.item__icon--pro {
+    width: 36px;
+    height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: #feb2b2;
+  color: #973737;
+  padding: 8px;
+}
+
+.item__text {
+  color: #243e63;
+  font-size: 20px;
+  margin: 0 0 0 12px;
+  font-weight: 700;
+}
+
+.value__item--para {
+    color: #718096;
     font-size: 16px;
-    max-width: 500px;
-    line-height: 2;
-    margin: 12px 0;
-  }
-  
-  .values__title {
-    margin-top: 24px;
-  }
-
-  .fa-solid.fa-dollar-sign {
-    
-        width: 200px;
-        border-radius: 50%;
-        border: 3px solid black;
-        display: grid;
-        place-items: center;
-        background-color: #9ae6bf;
-        color:#346b4f
-
-  }
-  .fa-solid.fa-briefcase {
-    
-        width: 200px;
-        border-radius: 50%;
-        border: 3px solid black;
-        display: grid;
-        place-items: center;
-        background-color: #feb2b2;
-        color:#973737;
-
-  }
-  
+}
