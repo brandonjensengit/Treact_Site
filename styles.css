@@ -781,3 +781,46 @@ h6 {
   height: 16px;
   background-color: #a0aec0;
 }
+
+/* GET STARTED */
+
+
+
+.get-started__wrapper {
+    display: flex;
+    background-color: rgb(100 21 255);
+    justify-content: space-between;
+    width: 100%;
+    height: 256px;
+    align-items: center;
+    border-radius: 8px;
+    padding: 0 112px;
+    margin-bottom: 128px;
+}
+
+.get-started__text {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    max-width: 500px;
+}
+
+.get-started__button--contact {
+    border: 1px solid white;
+    padding: 18px 32px;
+}
+
+.get-started__button--contact:hover {
+    background-color: white;
+    color:#6415ff;
+}
+
+.get-started__button {
+    background-color:rgb(245 101 101);
+    padding: 18px 32px;
+    margin-right: 24px;
+}
+
+.get-started__button:hover {
+    background-color: #d93636
+}
