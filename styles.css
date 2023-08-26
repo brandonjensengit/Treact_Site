@@ -457,6 +457,7 @@ h6 {
   margin-bottom: 16px;
 }
 
+
 .values__img--wrapper {
   width: 50%;
   display: flex;
@@ -504,6 +505,7 @@ h6 {
 .value__item--para {
   color: #718096;
   font-size: 16px;
+  margin-right: 24px;
 }
 
 /* PRICING */
@@ -1016,6 +1018,23 @@ h6 {
     font-size: 18px;
   }
 
+  .row {
+    padding:56px;
+  }
+
+  .quality__img--wrapper {
+    height: 100%;
+  }
+
+  .row__quality {
+    align-items: center;
+  }
+
+  .row__steps {
+    display: flex;
+    align-items: center;
+  }
+
   .nav__links {
     display: none;
   }
@@ -1236,11 +1255,16 @@ h6 {
 
   .row__features {
     margin-bottom: 32px;
+    padding: 24px;
+    text-align: center;
   }
   .features__item {
     width: 100%;
   }
 
+  #quality {
+    margin-bottom: 64px;
+  }
   .row__quality {
     flex-direction: column-reverse;
     align-items: center;
@@ -1257,6 +1281,9 @@ h6 {
     width: 90%;
   }
 
+  #steps {
+    margin-bottom: 64px;
+  }
   .row__steps {
     display: flex;
     flex-direction: column;
@@ -1274,6 +1301,7 @@ h6 {
     flex-direction: column;
   }
 
+
   .step__number {
     margin: 12px 0;
   }
@@ -1289,6 +1317,10 @@ h6 {
     text-align: center;
     width: 100%;
   }
+
+#values {
+    margin-bottom: 64px;
+}
 
 .values__img--wrapper {
     width: 100%;
@@ -1307,6 +1339,14 @@ h6 {
     margin-bottom: 16px;
     align-items: center;
   }
+
+  .value__item--para {
+    margin-right: 0;
+  }
+
+#pricing {
+    margin-bottom: 64px;
+}
 
 .pricing_text--top {
     padding: 24px;
@@ -1331,6 +1371,9 @@ h6 {
     text-align: center;
   }
 
+  #testimonials {
+    margin-bottom: 64px;
+  }
   .row__testimonials {
     flex-wrap: wrap;
     justify-content: center;
@@ -1363,16 +1406,19 @@ h6 {
 
 .footer__links--list {
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
   }
 
-  .footer__links--category {
+  .footer__links-category {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
     width: 50%;
+    margin-bottom: 24px;
   }
+
 
 .footer__info--wrapper {
     display: flex;
