@@ -824,3 +824,60 @@ h6 {
 .get-started__button:hover {
     background-color: #d93636
 }
+
+/* FOOTER */
+
+.footer__container {
+    background-color: #6415ff;
+    color: white;
+}
+
+.row__footer {
+    display: flex;
+    flex-direction: column;
+}
+.footer__links--list {
+    display: flex;
+    justify-content: space-between;
+    padding: 72px 0;
+}
+
+.footer__category {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.link {
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+}
+
+.links__list {
+    margin-top: 24px;
+}
+
+.footer__info--wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.footer__logo {
+    color: white;
+}
+
+.footer__social--link {
+    width: 24px;
+    height: 24px;
+    scale: 2;
+    margin-right: 24px;
+    color: white;
+    transition: all 300ms ease;
+}
+
+.footer__social--link:hover {
+    color: #919191
+}
