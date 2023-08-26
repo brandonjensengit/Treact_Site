@@ -24,6 +24,7 @@
               />
               <h2 class="logo__heading">Treact</h2>
             </div>
+            
             <ul class="nav__links">
               <li><a href="" class="nav__link">About</a></li>
               <li><a href="" class="nav__link">Blog</a></li>
@@ -34,14 +35,41 @@
                 <a href="" class="nav__link--primary">Sign Up</a>
               </li>
             </ul>
+            <button class="btn__menu" onclick="openMenu()">
+                <i class="fas fa-bars"></i>
+              </button>
+              <div class="menu__backdrop">
+                <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                  <i class="fas fa-times"></i>
+                </button>
+                <ul class="menu__links">
+                  <li class="menu__list">
+                    <a href="#features" class="menu__link no-cursor" onclick="closeMenu()">About</a>
+                  </li>
+                  <li class="menu__list">
+                    <a href="#" class="menu__link no-cursor" onclick="closeMenu()">Features</a>
+                  </li>
+                  <li class="menu__list">
+                    <a href="#pricing" class="menu__link" onclick="closeMenu()">Pricing</a>
+                  </li>
+                  <li class="menu__list">
+                    <a href="#footer" class="menu__link" onclick="closeMenu()">Contact Us</a>
+                  </li>
+                  <li class="menu__list">
+                    <a href="#" class="menu__link no-cursor" onclick="closeMenu()">Login</a>
+                  </li>
+                  <li class="menu__list">
+                    <a href="#" class="menu__link no-cursor btn" onclick="closeMenu()">Sign Up</a>
+                  </li>
+                </ul>
           </div>
+          
         </div>
       </nav>
       <header>
         <div class="header__container">
-          <div class="row">
+          <div class="row row__header">
             <div class="header__des">
-              <div class="header__des--title"></div>
               <h1>
                 Beautiful React Templates<span class="purple-text">
                   for you.</span
@@ -61,13 +89,21 @@
                 />
                 <button class="btn">Get Started</button>
               </form>
-
+              <form action="" class="header__des--form-mobile">
+                <input
+                  type="text"
+                  placeholder="Your E-mail Address"
+                  class="des__placeholder"
+                />
+                <button class="btn">Get Started</button>
+              </form>
               <p class="header__des__sub-title">Our Trusted Customers</p>
               <img
                 src="./assets/customers-logo-strip.680ac7c2e8ae28161d2c.png"
                 class="header__des--img"
                 alt=""
               />
+              
             </div>
             <img
               src="assets/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg"
@@ -75,6 +111,7 @@
               alt=""
             />
           </div>
+          
         </div>
       </header>
     </section>
@@ -174,7 +211,7 @@
 
       <section id="quality">
         <div class="container">
-          <div class="row">
+          <div class="row row__quality">
             <div class="quality__info">
               <span class="section__span span__quality">QUALITY WORK</span>
               <h2 class="section__title quality__title">
@@ -201,7 +238,7 @@
 
       <section id="steps">
         <div class="container">
-          <div class="row">
+          <div class="row row__steps">
             <figure class="steps__img--wrapper">
               <img
                 src="./assets/hero-screenshot-2.241aac1fbc66db29d873.png"
@@ -251,7 +288,7 @@
       </section>
       <section id="values">
         <div class="container">
-          <div class="row">
+          <div class="row row__values">
             <div class="value__info">
               <span class="section__span span__value">VALUES</span>
               <h2 class="section__title value__title">
@@ -500,7 +537,7 @@
       </section>
 
       <section id="get-started">
-        <div class="row row__get-started">
+        <div class="row">
           <div class="get-started__wrapper">
             <div class="get-started__text">
               <h5>Developers all over the world are happily using Treact.</h5>

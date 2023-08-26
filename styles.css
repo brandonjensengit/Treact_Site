@@ -7,8 +7,8 @@
   font-family: "Inter", sans-serif;
 }
 
-ul {
-  list-style: none;
+html {
+  scroll-behavior: smooth;
 }
 
 nav {
@@ -21,7 +21,11 @@ h1 {
   font-size: 44px;
   font-weight: 700;
   line-height: 1.25;
-  color: rgb(26 32 44 / var(--tw-text-opacity));
+  color: rgb(26 32 44);
+}
+
+ul {
+  list-style: none;
 }
 
 .purple-text {
@@ -33,9 +37,10 @@ h1 {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-
   justify-content: space-between;
 }
+
+/* NAVIGATION */
 
 .container__nav {
   margin: 16px;
@@ -70,11 +75,11 @@ h1 {
 .nav__link::before {
   content: "";
   position: absolute;
-  bottom: -2px; 
+  bottom: -2px;
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: transparent; 
+  background-color: transparent;
   border-bottom: 2px solid #6415ff;
   transform: scaleX(0);
   transform-origin: right;
@@ -106,12 +111,93 @@ h1 {
 }
 
 .nav__link--primary:hover {
-    background-color: #4a0ebe;
+  background-color: #4a0ebe;
 }
 
 .logo__heading {
   color: #243e63;
   font-weight: 900;
+}
+
+.btn__menu {
+  background-color: transparent;
+  font-size: 24px;
+  text-align: center;
+  border: none;
+  color: #7342d6;
+  display: none;
+}
+
+.menu__backdrop {
+  position: absolute;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu--open .menu__backdrop {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu--open {
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+.btn__menu--close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding: 8px;
+  color: #6415ff;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__list {
+  padding: 24px;
+}
+
+.menu__link {
+  font-size: 18px;
+  color: #1a202c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn {
+  background-color: #6415ff;
+  color: #f7fafc;
+  border-radius: 50px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  transition: all 300ms ease;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #4a0ebe;
+}
+
+.no-cursor {
+  cursor: not-allowed;
 }
 
 /* HEADER */
@@ -148,7 +234,7 @@ header {
   margin-top: 1px;
 }
 
-/* EMAIL FORM */
+/* -----EMAIL FORM----- */
 
 .header__des--form {
   display: flex;
@@ -168,21 +254,12 @@ header {
   border: 2px solid #6415ff;
 }
 
-.btn {
-  background-color: #6415ff;
-  color: #f7fafc;
-  border-radius: 50px;
-  padding: 16px 32px;
-  font-size: 16px;
-  font-weight: 600;
-  border: none;
+.header__des--form-mobile {
+  display: none;
+  display: flex;
+  padding: 6px;
+  font-weight: 500;
   transition: all 300ms ease;
-  margin-left: 5px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #4a0ebe;
 }
 
 .des__placeholder {
@@ -225,7 +302,7 @@ header {
   margin-bottom: 24px;
 }
 
-h2.section__title {
+.section__title {
   color: #243e63;
   font-size: 48px;
   margin-bottom: 16px;
@@ -870,32 +947,32 @@ h6 {
 }
 
 .link {
-    font-size: 14px;
-    text-decoration: none;
-    color: white;
-    position: relative;
-    display: inline-block; /* Change the display property */
-    margin-bottom: 16px;
-  }
-  
-  .link::before {
-    content: "";
-    position: absolute;
-    bottom: -2px; /* Adjust this value to control the space between the link and the underline */
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: transparent; /* You can set a background color here if needed */
-    border-bottom: 2px solid white;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-  }
-  
-  .link:hover::before {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  display: inline-block; /* Change the display property */
+  margin-bottom: 16px;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Adjust this value to control the space between the link and the underline */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent; /* You can set a background color here if needed */
+  border-bottom: 2px solid white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 
 .links__list {
   margin-top: 24px;
@@ -904,7 +981,7 @@ h6 {
 .footer__info--wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 64px;
+  padding: 24px 0;
   margin-bottom: 24px;
   align-items: center;
 }
@@ -924,4 +1001,273 @@ h6 {
 
 .footer__social--link:hover {
   color: #919191;
+}
+
+/* MOBILE RESPONSIVE */
+
+/*TABLETS & LAPTOPS*/
+
+@media (max-width: 1028px) {
+  .header__description {
+    padding: 0 24px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .btn__menu {
+    display: block;
+  }
+}
+
+/* TABLETS */
+
+@media (max-width: 768px) {
+  .header__description {
+    padding: 0 24px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .btn__menu {
+    display: block;
+  }
+
+  .row {
+    max-width: 600px;
+  }
+
+  .row__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__des {
+    display: flex;
+    width: 100%;
+    flex: column;
+    align-items: center;
+    text-align: center;
+  }
+  .header__des--para {
+    font-size: 16px;
+  }
+
+  .section__title {
+    font-size: 26px;
+  }
+
+  .header__des--img {
+    max-width: 400px;
+    margin-bottom: 24px;
+  }
+  .features__item {
+    width: 50%;
+  }
+
+  .quality__img--wrapper {
+    height: 100%;
+  }
+
+  .row__quality {
+    align-items: center;
+  }
+
+  .row__steps {
+    display: flex;
+    align-items: center;
+  }
+
+  .row__values {
+    display: flex;
+    align-items: center;
+  }
+
+  .values__list {
+    flex-wrap: wrap;
+  }
+
+  .value__item {
+    margin-bottom: 16px;
+  }
+
+  .pricing__plan {
+    width: 50%;
+    margin-bottom: 32px;
+  }
+  .pricing__plans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row__testimonials {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }
+
+  .get-started__wrapper {
+    flex-direction: column;
+    padding: 56px;
+    text-align: center;
+  }
+
+  .footer__social--list {
+    display: flex;
+  }
+
+  .footer__social--link {
+    font-size: 16px;
+  }
+}
+
+/* SMALL PHONES, LARGE SMARTPHONES */
+
+@media (max-width: 550px) {
+  .header__description {
+    padding: 0 24px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .btn__menu {
+    display: block;
+  }
+
+  .row {
+    max-width: 600px;
+  }
+
+  .row__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__des {
+    display: flex;
+    width: 100%;
+    flex: column;
+    align-items: center;
+    text-align: center;
+  }
+  .header__des--para {
+    font-size: 16px;
+  }
+
+  .section__title {
+    font-size: 26px;
+  }
+
+  .header__des--img {
+    max-width: 400px;
+    margin-bottom: 24px;
+  }
+
+  .header__des--form {
+    display: none;
+
+  }
+  
+  .header__des--form-mobile {
+    display: block;
+    
+  }
+
+  .features__item {
+    width: 50%;
+  }
+
+  .quality__img--wrapper {
+    height: 100%;
+  }
+
+  .row__quality {
+    align-items: center;
+  }
+
+  .row__steps {
+    display: flex;
+    align-items: center;
+  }
+
+  .row__values {
+    display: flex;
+    align-items: center;
+  }
+
+  .values__list {
+    flex-wrap: wrap;
+  }
+
+  .value__item {
+    margin-bottom: 16px;
+  }
+
+  .pricing__plan {
+    width: 50%;
+    margin-bottom: 32px;
+  }
+  .pricing__plans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row__testimonials {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }
+
+  .get-started__wrapper {
+    flex-direction: column;
+    padding: 56px;
+    text-align: center;
+  }
+
+  .footer__social--list {
+    display: flex;
+  }
+
+  .footer__social--link {
+    font-size: 16px;
+  }
 }
