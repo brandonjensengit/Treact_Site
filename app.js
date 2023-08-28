@@ -42,3 +42,32 @@ function openMenu() {
 function closeMenu() {
   document.body.classList.remove("menu--open");
 }
+
+// Scroll function
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const targetClassList = entry.target.classList;
+      if (targetClassList.contains('slide-in-left') || targetClassList.contains('slide-in-right')) {
+        entry.target.style.opacity = 1;  // Reset opacity
+        entry.target.classList.add('animate');
+      }
+    }
+  });
+});
+
+document.querySelectorAll('.animate-section').forEach((section) => {
+  observer.observe(section);
+});
+
+
+
+
+
+
+
+
+
+
+
